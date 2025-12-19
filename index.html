@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Kobus - Portfolio</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+        <div class="nav-left">
+            <a href="index.html">work</a>
+            <a href="kontakt.html">about / contact</a>
+        </div>
+        <div class="nav-center">
+            <a href="index.html">Jan Kobus</a>
+        </div>
+        <div class="nav-right">
+            
+            <a href="https://www.facebook.com/profile.php?id=100069116356707"><i class="fab fa-facebook-f"></i></a>
+            
+            <a href="https://www.instagram.com/redix.45/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Jan Kobus</h1>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <section class="gallery" id="work">
+        
+      <div class="gallery-container">
+    <div class="gallery-item">
+        <a href="operetka.html"> 
+            <img src="photos/operetka/foto (2).jpg" alt="Iceland">
+        </a>
+    </div>
+    <div class="caption-box">
+        <div class="caption-title">Cabaret w Operetce</div>
+        <div class="caption-year">2025</div>
+    </div>
+</div>
+
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <a href="dzien_niepodleglosci.html">
+                    <img src="photos/dzien_niepodleglosci_kazik2025/fot (1).jpg" alt="Alps">
+                </a>
+            </div>
+            <div class="caption-box">
+                <div class="caption-title">Dzień Niepodległośći ZSOT</div>
+                <div class="caption-year">2025</div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        document.querySelector('.scroll-down').addEventListener('click', function() {
+            document.getElementById('work').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    </script>
+
+</body>
+</html>
