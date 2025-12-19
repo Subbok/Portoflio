@@ -36,7 +36,13 @@ function loadGallery(config) {
             div.style.display = 'none'; 
         };
 
+        const watermark = document.createElement('img');
+        watermark.src = 'photos/watermark.svg';
+        watermark.className = 'watermark';
+        watermark.alt = '';
+
         div.appendChild(img);
+        div.appendChild(watermark);
         galleryContainer.appendChild(div);
     }
     
