@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operetka - Galeria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Powrót</a>
+    </nav>
+
+    <header class="project-header">
+        <h1>Operetka</h1>
+    </header>
+
+    <section class="masonry-gallery" id="moja-galeria">
+        </section>
+
+    <script>
+        // KONFIGURACJA
+        const folder = 'photos/operetka/'; // Ścieżka do folderu ze zdjęciami
+        const iloscZdjec = 44;          // ILE masz zdjęć w folderze?
+        const rozszerzenie = '.jpg';    // Jakie mają rozszerzenie? (.jpg, .png)
+
+        // Znajdź kontener galerii
+        const galeria = document.getElementById('moja-galeria');
+
+        // Pętla, która wykona się tyle razy, ile wpisałeś w 'iloscZdjec'
+        for (let i = 1; i <= iloscZdjec; i++) {
+            
+            // 1. Stwórz element div (masonry-item)
+            const div = document.createElement('div');
+            div.className = 'masonry-item';
+
+            // 2. Stwórz element img
+            const img = document.createElement('img');
+            // Tutaj budujemy nazwę pliku: foto (1).jpg
+            img.src = folder + 'foto (' + i + ')' + rozszerzenie; 
+            img.alt = 'Zdjęcie nr ' + i;
+            
+            // Opcjonalnie: obsługa błędu (gdyby brakowało pliku) — wypisz w konsoli
+            img.onerror = function() { console.warn('Nie znaleziono pliku:', this.src); this.style.display = 'none'; };
+
+            // 3. Włóż img do diva, a diva do galerii
+            div.appendChild(img);
+            galeria.appendChild(div);
+        }
+    </script>
+
+</body>
+</html>
